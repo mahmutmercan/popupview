@@ -8,6 +8,7 @@
 
 import UIKit
 class Popup: UIView {
+    
     fileprivate let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -15,6 +16,18 @@ class Popup: UIView {
         label.text = "1 credit"
         label.textAlignment = .center
         return label
+    }()
+    fileprivate let topImage: UIImageView = {
+        let imageName = "kizkulesi"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 100)
+//        self.addSubview(imageView)
+        
+                
+        return imageView
+        
+        
     }()
 
     fileprivate let subtitleLabel: UILabel = {
@@ -36,7 +49,7 @@ class Popup: UIView {
     }()
 
     fileprivate lazy var stack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        let stack = UIStackView(arrangedSubviews: [topImage, titleLabel, subtitleLabel,])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         return stack

@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
 
         
+
+    }
+
+    @IBAction func button1(_ sender: Any) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             let pop = Popup()
             self.view.addSubview(pop)
@@ -22,7 +26,6 @@ class ViewController: UIViewController {
         }
 
     }
-
-
+    
 }
 
